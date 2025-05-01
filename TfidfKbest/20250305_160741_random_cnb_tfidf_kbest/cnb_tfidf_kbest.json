@@ -1,0 +1,229 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "cnb",
+      "embedding_type": "tfidf",
+      "brand_removal": false,
+      "use_select_kbest": true,
+      "use_smote": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_lda": false,
+      "save_interesting_articles": false,
+      "use_scaler": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv"
+    },
+    "best_params": {
+      "clf__alpha": 0.079403964796582,
+      "clf__fit_prior": false,
+      "clf__norm": false,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1321,
+      "select__score_func": "chi2"
+    },
+    "best_cv_score": 0.6161423812523089,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.6084615384615385,
+      "mae": 0.5638461538461539,
+      "macro_f1": 0.6043710773644709,
+      "macro_precision": 0.6024597823861317,
+      "macro_recall": 0.6238398027043174,
+      "weighted_f1": 0.6093623319791279,
+      "weighted_precision": 0.6252617968987085,
+      "weighted_recall": 0.6084615384615385
+    },
+    "test_confusion_matrix": [
+      [
+        221,
+        87,
+        94
+      ],
+      [
+        28,
+        221,
+        50
+      ],
+      [
+        130,
+        120,
+        349
+      ]
+    ],
+    "test_confidence_mean": 0.39987569149482954,
+    "test_confidence_std": 0.054164190155217076,
+    "subgroup_source": {},
+    "subgroup_topic": {
+      "palestine": {
+        "accuracy": 0.8571428571428571,
+        "macro_f1": 0.8412698412698413,
+        "num_samples": 7
+      },
+      "federal_budget": {
+        "accuracy": 0.803921568627451,
+        "macro_f1": 0.5993265993265994,
+        "num_samples": 51
+      },
+      "fbi": {
+        "accuracy": 0.7285714285714285,
+        "macro_f1": 0.5882646691635456,
+        "num_samples": 70
+      },
+      "politics": {
+        "accuracy": 0.5894568690095847,
+        "macro_f1": 0.5785589610191,
+        "num_samples": 626
+      },
+      "media_bias": {
+        "accuracy": 0.6165413533834586,
+        "macro_f1": 0.41727556702431073,
+        "num_samples": 133
+      },
+      "labor": {
+        "accuracy": 0.8,
+        "macro_f1": 0.5523809523809523,
+        "num_samples": 10
+      },
+      "education": {
+        "accuracy": 0.5862068965517241,
+        "macro_f1": 0.5256598240469209,
+        "num_samples": 29
+      },
+      "lgbt_rights": {
+        "accuracy": 0.5205479452054794,
+        "macro_f1": 0.49765907825118355,
+        "num_samples": 73
+      },
+      "race_and_racism": {
+        "accuracy": 0.6698113207547169,
+        "macro_f1": 0.6662315900873094,
+        "num_samples": 106
+      },
+      "cybersecurity": {
+        "accuracy": 0.4583333333333333,
+        "macro_f1": 0.33481481481481484,
+        "num_samples": 24
+      },
+      "great_britain": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.24444444444444446,
+        "num_samples": 6
+      },
+      "national_defense": {
+        "accuracy": 0.5277777777777778,
+        "macro_f1": 0.4074074074074074,
+        "num_samples": 36
+      },
+      "us_military": {
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.5,
+        "num_samples": 6
+      },
+      "justice_department": {
+        "accuracy": 0.07142857142857142,
+        "macro_f1": 0.044444444444444446,
+        "num_samples": 14
+      },
+      "nuclear_weapons": {
+        "accuracy": 0.6190476190476191,
+        "macro_f1": 0.4563492063492063,
+        "num_samples": 21
+      },
+      "supreme_court": {
+        "accuracy": 0.8095238095238095,
+        "macro_f1": 0.7848484848484848,
+        "num_samples": 21
+      },
+      "banking_and_finance": {
+        "accuracy": 0.75,
+        "macro_f1": 0.42857142857142855,
+        "num_samples": 8
+      },
+      "culture": {
+        "accuracy": 0.8,
+        "macro_f1": 0.5555555555555555,
+        "num_samples": 5
+      },
+      "treasury": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.3333333333333333,
+        "num_samples": 6
+      },
+      "republican_party": {
+        "accuracy": 0.8461538461538461,
+        "macro_f1": 0.4583333333333333,
+        "num_samples": 13
+      },
+      "gun_control_and_gun_rights": {
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.4,
+        "num_samples": 12
+      },
+      "environment": {
+        "accuracy": 0.625,
+        "macro_f1": 0.5636363636363637,
+        "num_samples": 8
+      },
+      "opioid_crisis": {
+        "accuracy": 0.25,
+        "macro_f1": 0.2,
+        "num_samples": 4
+      },
+      "polarization": {
+        "accuracy": 0.75,
+        "macro_f1": 0.42857142857142855,
+        "num_samples": 4
+      },
+      "justice": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 4
+      },
+      "trade": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 1
+      },
+      "mexico": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "num_samples": 2
+      }
+    }
+  },
+  "timing": {
+    "run_time_seconds": 36.136815309524536,
+    "run_time_minutes": 0.6022802551587423
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 493,
+      "1": 428,
+      "0": 379
+    },
+    "class_0_avg_probability": 0.3222737370041421,
+    "class_1_avg_probability": 0.3279384240820378,
+    "class_2_avg_probability": 0.34978783891382015
+  }
+}
