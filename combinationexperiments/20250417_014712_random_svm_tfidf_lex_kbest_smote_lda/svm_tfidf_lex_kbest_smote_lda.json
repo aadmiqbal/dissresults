@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": false,
+      "use_smote": true,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_lex_smote_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5164357054138498,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.48384615384615387,
+      "mae": 0.7376923076923076,
+      "macro_f1": 0.46547625857898683,
+      "macro_precision": 0.4708372731091184,
+      "macro_recall": 0.4698044183320856,
+      "weighted_f1": 0.48866196050878113,
+      "weighted_precision": 0.5046141752989698,
+      "weighted_recall": 0.48384615384615387
+    },
+    "test_confusion_matrix": [
+      [
+        214,
+        79,
+        109
+      ],
+      [
+        124,
+        110,
+        65
+      ],
+      [
+        179,
+        115,
+        305
+      ]
+    ],
+    "test_confidence_mean": 0.47687090041588887,
+    "test_confidence_std": 0.1246660437385773,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.41392649903288203,
+        "recall": 0.5323383084577115,
+        "f1-score": 0.4657236126224157,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.3618421052631579,
+        "recall": 0.36789297658862874,
+        "f1-score": 0.3648424543946932,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.6367432150313153,
+        "recall": 0.5091819699499165,
+        "f1-score": 0.5658627087198516,
+        "support": 599.0
+      },
+      "accuracy": 0.48384615384615387,
+      "macro avg": {
+        "precision": 0.4708372731091184,
+        "recall": 0.4698044183320856,
+        "f1-score": 0.46547625857898683,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.5046141752989698,
+        "recall": 0.48384615384615387,
+        "f1-score": 0.48866196050878113,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.414     0.532     0.466       402\n           1      0.362     0.368     0.365       299\n           2      0.637     0.509     0.566       599\n\n    accuracy                          0.484      1300\n   macro avg      0.471     0.470     0.465      1300\nweighted avg      0.505     0.484     0.489      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1199.067468881607,
+    "run_time_minutes": 19.98445781469345
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 517,
+      "2": 479,
+      "1": 304
+    },
+    "class_0_avg_probability": 0.30140590658578104,
+    "class_1_avg_probability": 0.3055848106053853,
+    "class_2_avg_probability": 0.3930092828088337,
+    "svm_num_support_vectors": 2674
+  }
+}

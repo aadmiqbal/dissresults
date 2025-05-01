@@ -1,0 +1,134 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "logreg",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/logreg/tfidf_kbest_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__max_iter": 2000,
+      "clf__penalty": "l1",
+      "clf__solver": "saga",
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.7105176085425225,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.696923076923077,
+      "mae": 0.4646153846153846,
+      "macro_f1": 0.6928357505086685,
+      "macro_precision": 0.6868695843396951,
+      "macro_recall": 0.7029763809395447,
+      "weighted_f1": 0.6976651718696486,
+      "weighted_precision": 0.7021798511707589,
+      "weighted_recall": 0.696923076923077
+    },
+    "test_confusion_matrix": [
+      [
+        254,
+        54,
+        94
+      ],
+      [
+        40,
+        232,
+        27
+      ],
+      [
+        116,
+        63,
+        420
+      ]
+    ],
+    "test_confidence_mean": 0.7590850612352613,
+    "test_confidence_std": 0.18097293469771186,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.6195121951219512,
+        "recall": 0.6318407960199005,
+        "f1-score": 0.625615763546798,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.664756446991404,
+        "recall": 0.7759197324414716,
+        "f1-score": 0.7160493827160493,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.7763401109057301,
+        "recall": 0.7011686143572621,
+        "f1-score": 0.7368421052631579,
+        "support": 599.0
+      },
+      "accuracy": 0.696923076923077,
+      "macro avg": {
+        "precision": 0.6868695843396951,
+        "recall": 0.7029763809395447,
+        "f1-score": 0.6928357505086685,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.7021798511707589,
+        "recall": 0.696923076923077,
+        "f1-score": 0.6976651718696486,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.620     0.632     0.626       402\n           1      0.665     0.776     0.716       299\n           2      0.776     0.701     0.737       599\n\n    accuracy                          0.697      1300\n   macro avg      0.687     0.703     0.693      1300\nweighted avg      0.702     0.697     0.698      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 2035.614054441452,
+    "run_time_minutes": 33.926900907357535
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 541,
+      "0": 410,
+      "1": 349
+    },
+    "class_0_avg_probability": 0.3240709209647992,
+    "class_1_avg_probability": 0.2818351694058484,
+    "class_2_avg_probability": 0.3940939096293524,
+    "logreg_n_iter": [
+      2000
+    ]
+  }
+}

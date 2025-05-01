@@ -1,0 +1,134 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "logreg",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": true,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/logreg/tfidf_kbest_vader_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__max_iter": 2000,
+      "clf__penalty": "l1",
+      "clf__solver": "saga",
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.7103433503123624,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.6961538461538461,
+      "mae": 0.46692307692307694,
+      "macro_f1": 0.6920856043381911,
+      "macro_precision": 0.6863621938543409,
+      "macro_recall": 0.7013032095632449,
+      "weighted_f1": 0.6968954972978378,
+      "weighted_precision": 0.7008188525922646,
+      "weighted_recall": 0.6961538461538461
+    },
+    "test_confusion_matrix": [
+      [
+        254,
+        51,
+        97
+      ],
+      [
+        42,
+        230,
+        27
+      ],
+      [
+        115,
+        63,
+        421
+      ]
+    ],
+    "test_confidence_mean": 0.7598531360192744,
+    "test_confidence_std": 0.1797633213883527,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.6180048661800487,
+        "recall": 0.6318407960199005,
+        "f1-score": 0.6248462484624846,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.6686046511627907,
+        "recall": 0.7692307692307693,
+        "f1-score": 0.7153965785381027,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.7724770642201835,
+        "recall": 0.7028380634390651,
+        "f1-score": 0.736013986013986,
+        "support": 599.0
+      },
+      "accuracy": 0.6961538461538461,
+      "macro avg": {
+        "precision": 0.6863621938543409,
+        "recall": 0.7013032095632449,
+        "f1-score": 0.6920856043381911,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.7008188525922646,
+        "recall": 0.6961538461538461,
+        "f1-score": 0.6968954972978378,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.618     0.632     0.625       402\n           1      0.669     0.769     0.715       299\n           2      0.772     0.703     0.736       599\n\n    accuracy                          0.696      1300\n   macro avg      0.686     0.701     0.692      1300\nweighted avg      0.701     0.696     0.697      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 2046.252779006958,
+    "run_time_minutes": 34.1042129834493
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 545,
+      "0": 411,
+      "1": 344
+    },
+    "class_0_avg_probability": 0.3242105877437612,
+    "class_1_avg_probability": 0.28171063975995325,
+    "class_2_avg_probability": 0.3940787724962855,
+    "logreg_n_iter": [
+      2000
+    ]
+  }
+}

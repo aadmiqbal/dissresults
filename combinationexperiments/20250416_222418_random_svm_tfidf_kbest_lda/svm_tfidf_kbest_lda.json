@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5252464831632307,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.5023076923076923,
+      "mae": 0.7361538461538462,
+      "macro_f1": 0.4864825131610288,
+      "macro_precision": 0.48675031810924896,
+      "macro_recall": 0.4875351561224295,
+      "weighted_f1": 0.5048233212760063,
+      "weighted_precision": 0.5088316619187827,
+      "weighted_recall": 0.5023076923076923
+    },
+    "test_confusion_matrix": [
+      [
+        185,
+        81,
+        136
+      ],
+      [
+        85,
+        132,
+        82
+      ],
+      [
+        174,
+        89,
+        336
+      ]
+    ],
+    "test_confidence_mean": 0.47818715262718026,
+    "test_confidence_std": 0.11440587908828674,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.4166666666666667,
+        "recall": 0.4601990049751244,
+        "f1-score": 0.4373522458628842,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.4370860927152318,
+        "recall": 0.4414715719063545,
+        "f1-score": 0.43926788685524126,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.6064981949458483,
+        "recall": 0.5609348914858097,
+        "f1-score": 0.5828274067649609,
+        "support": 599.0
+      },
+      "accuracy": 0.5023076923076923,
+      "macro avg": {
+        "precision": 0.48675031810924896,
+        "recall": 0.4875351561224295,
+        "f1-score": 0.4864825131610288,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.5088316619187827,
+        "recall": 0.5023076923076923,
+        "f1-score": 0.5048233212760063,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.417     0.460     0.437       402\n           1      0.437     0.441     0.439       299\n           2      0.606     0.561     0.583       599\n\n    accuracy                          0.502      1300\n   macro avg      0.487     0.488     0.486      1300\nweighted avg      0.509     0.502     0.505      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1426.0927472114563,
+    "run_time_minutes": 23.76821245352427
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 554,
+      "0": 444,
+      "1": 302
+    },
+    "class_0_avg_probability": 0.3028288809986521,
+    "class_1_avg_probability": 0.27192511889884724,
+    "class_2_avg_probability": 0.4252460001025006,
+    "svm_num_support_vectors": 2662
+  }
+}

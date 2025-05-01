@@ -1,0 +1,134 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "xgb",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/xgb/tfidf_kbest_scaler_lda"
+    },
+    "best_params": {
+      "clf__colsample_bytree": 0.8,
+      "clf__gamma": 1,
+      "clf__learning_rate": 0.1,
+      "clf__max_depth": 5,
+      "clf__min_child_weight": 5,
+      "clf__n_estimators": 200,
+      "clf__subsample": 0.7,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 5000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1877,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.7769061488059761,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.5738461538461539,
+      "mae": 0.6538461538461539,
+      "macro_f1": 0.5539290175581387,
+      "macro_precision": 0.5745658263305322,
+      "macro_recall": 0.549261720387293,
+      "weighted_f1": 0.5724216694160927,
+      "weighted_precision": 0.5830267614738203,
+      "weighted_recall": 0.5738461538461539
+    },
+    "test_confusion_matrix": [
+      [
+        240,
+        36,
+        126
+      ],
+      [
+        90,
+        123,
+        86
+      ],
+      [
+        170,
+        46,
+        383
+      ]
+    ],
+    "test_confidence_mean": 0.5836811065673828,
+    "test_confidence_std": 0.1371462047100067,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.48,
+        "recall": 0.5970149253731343,
+        "f1-score": 0.532150776053215,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.6,
+        "recall": 0.411371237458194,
+        "f1-score": 0.4880952380952381,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.6436974789915967,
+        "recall": 0.6393989983305509,
+        "f1-score": 0.6415410385259631,
+        "support": 599.0
+      },
+      "accuracy": 0.5738461538461539,
+      "macro avg": {
+        "precision": 0.5745658263305322,
+        "recall": 0.549261720387293,
+        "f1-score": 0.5539290175581387,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.5830267614738203,
+        "recall": 0.5738461538461539,
+        "f1-score": 0.5724216694160927,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.480     0.597     0.532       402\n           1      0.600     0.411     0.488       299\n           2      0.644     0.639     0.642       599\n\n    accuracy                          0.574      1300\n   macro avg      0.575     0.549     0.554      1300\nweighted avg      0.583     0.574     0.572      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 502.6342387199402,
+    "run_time_minutes": 8.377237311999004
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 595,
+      "0": 500,
+      "1": 205
+    },
+    "class_0_avg_probability": 0.36655452847480774,
+    "class_1_avg_probability": 0.23710396885871887,
+    "class_2_avg_probability": 0.396341472864151,
+    "xgb_num_trees": 200
+  }
+}

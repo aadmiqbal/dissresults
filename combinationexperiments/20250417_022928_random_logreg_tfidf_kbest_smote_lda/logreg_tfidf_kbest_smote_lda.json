@@ -1,0 +1,134 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "logreg",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": true,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/logreg/tfidf_kbest_smote_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__max_iter": 2000,
+      "clf__penalty": "l1",
+      "clf__solver": "saga",
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.7095249564982402,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.6846153846153846,
+      "mae": 0.4707692307692308,
+      "macro_f1": 0.6795636437806946,
+      "macro_precision": 0.6738767861483267,
+      "macro_recall": 0.694955442792255,
+      "weighted_f1": 0.6855198758346202,
+      "weighted_precision": 0.6948957823631452,
+      "weighted_recall": 0.6846153846153846
+    },
+    "test_confusion_matrix": [
+      [
+        247,
+        64,
+        91
+      ],
+      [
+        41,
+        237,
+        21
+      ],
+      [
+        111,
+        82,
+        406
+      ]
+    ],
+    "test_confidence_mean": 0.7652280863616198,
+    "test_confidence_std": 0.18145481930886825,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.6190476190476191,
+        "recall": 0.6144278606965174,
+        "f1-score": 0.616729088639201,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.618798955613577,
+        "recall": 0.7926421404682275,
+        "f1-score": 0.6950146627565983,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.7837837837837838,
+        "recall": 0.67779632721202,
+        "f1-score": 0.7269471799462847,
+        "support": 599.0
+      },
+      "accuracy": 0.6846153846153846,
+      "macro avg": {
+        "precision": 0.6738767861483267,
+        "recall": 0.694955442792255,
+        "f1-score": 0.6795636437806946,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.6948957823631452,
+        "recall": 0.6846153846153846,
+        "f1-score": 0.6855198758346202,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.619     0.614     0.617       402\n           1      0.619     0.793     0.695       299\n           2      0.784     0.678     0.727       599\n\n    accuracy                          0.685      1300\n   macro avg      0.674     0.695     0.680      1300\nweighted avg      0.695     0.685     0.686      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 2279.2203180789948,
+    "run_time_minutes": 37.98700530131658
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 518,
+      "0": 399,
+      "1": 383
+    },
+    "class_0_avg_probability": 0.3173298400083181,
+    "class_1_avg_probability": 0.30121250499666696,
+    "class_2_avg_probability": 0.38145765499501494,
+    "logreg_n_iter": [
+      2000
+    ]
+  }
+}

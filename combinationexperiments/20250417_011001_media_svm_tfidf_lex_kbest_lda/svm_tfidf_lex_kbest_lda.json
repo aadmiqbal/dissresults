@@ -1,0 +1,135 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": false,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_lex_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.028585493941961904,
+      "clf__class_weight": {
+        "0": 1.0,
+        "1": 2.0,
+        "2": 1.0
+      },
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1799,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5645738058254155,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.42846153846153845,
+      "mae": 0.8153846153846154,
+      "macro_f1": 0.4058658382660116,
+      "macro_precision": 0.40823534559270547,
+      "macro_recall": 0.41109131998609266,
+      "weighted_f1": 0.42969780939346675,
+      "weighted_precision": 0.439306457937875,
+      "weighted_recall": 0.42846153846153845
+    },
+    "test_confusion_matrix": [
+      [
+        205,
+        81,
+        116
+      ],
+      [
+        109,
+        81,
+        109
+      ],
+      [
+        201,
+        127,
+        271
+      ]
+    ],
+    "test_confidence_mean": 0.4951067108189645,
+    "test_confidence_std": 0.13920983475628998,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.39805825242718446,
+        "recall": 0.5099502487562189,
+        "f1-score": 0.44711014176663033,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.28027681660899656,
+        "recall": 0.2709030100334448,
+        "f1-score": 0.2755102040816326,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5463709677419355,
+        "recall": 0.4524207011686144,
+        "f1-score": 0.4949771689497717,
+        "support": 599.0
+      },
+      "accuracy": 0.42846153846153845,
+      "macro avg": {
+        "precision": 0.40823534559270547,
+        "recall": 0.41109131998609266,
+        "f1-score": 0.4058658382660116,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.439306457937875,
+        "recall": 0.42846153846153845,
+        "f1-score": 0.42969780939346675,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.398     0.510     0.447       402\n           1      0.280     0.271     0.276       299\n           2      0.546     0.452     0.495       599\n\n    accuracy                          0.428      1300\n   macro avg      0.408     0.411     0.406      1300\nweighted avg      0.439     0.428     0.430      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 928.9752199649811,
+    "run_time_minutes": 15.482920332749684
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 515,
+      "2": 496,
+      "1": 289
+    },
+    "class_0_avg_probability": 0.29956071424155334,
+    "class_1_avg_probability": 0.26604038370745414,
+    "class_2_avg_probability": 0.4343989020509924,
+    "svm_num_support_vectors": 2593
+  }
+}

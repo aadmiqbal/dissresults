@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": true,
+      "use_smote": true,
+      "use_scaler": false,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_vader_smote_lda"
+    },
+    "best_params": {
+      "clf__C": 1.2229467525390592,
+      "clf__class_weight": "balanced",
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 20,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 5000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1156,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.4546804674412869,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.35384615384615387,
+      "mae": 0.82,
+      "macro_f1": 0.29871941966022336,
+      "macro_precision": 0.34123325750060474,
+      "macro_recall": 0.3227506556307857,
+      "weighted_f1": 0.3337225492843799,
+      "weighted_precision": 0.37285170337817414,
+      "weighted_recall": 0.35384615384615387
+    },
+    "test_confusion_matrix": [
+      [
+        36,
+        193,
+        173
+      ],
+      [
+        13,
+        102,
+        184
+      ],
+      [
+        53,
+        224,
+        322
+      ]
+    ],
+    "test_confidence_mean": 0.39911992945930197,
+    "test_confidence_std": 0.03994956805725036,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.35294117647058826,
+        "recall": 0.08955223880597014,
+        "f1-score": 0.14285714285714285,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.19653179190751446,
+        "recall": 0.3411371237458194,
+        "f1-score": 0.24938875305623473,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.4742268041237113,
+        "recall": 0.5375626043405676,
+        "f1-score": 0.5039123630672926,
+        "support": 599.0
+      },
+      "accuracy": 0.35384615384615387,
+      "macro avg": {
+        "precision": 0.34123325750060474,
+        "recall": 0.3227506556307857,
+        "f1-score": 0.29871941966022336,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.37285170337817414,
+        "recall": 0.35384615384615387,
+        "f1-score": 0.3337225492843799,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.353     0.090     0.143       402\n           1      0.197     0.341     0.249       299\n           2      0.474     0.538     0.504       599\n\n    accuracy                          0.354      1300\n   macro avg      0.341     0.323     0.299      1300\nweighted avg      0.373     0.354     0.334      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1240.102905035019,
+    "run_time_minutes": 20.66838175058365
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 679,
+      "1": 519,
+      "0": 102
+    },
+    "class_0_avg_probability": 0.27754634408723694,
+    "class_1_avg_probability": 0.32880836734929736,
+    "class_2_avg_probability": 0.39364528856346565,
+    "svm_num_support_vectors": 2709
+  }
+}

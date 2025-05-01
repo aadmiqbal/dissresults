@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": true,
+      "use_smote": true,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_vader_smote_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5251036762555648,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.4530769230769231,
+      "mae": 0.7861538461538462,
+      "macro_f1": 0.4398887883325194,
+      "macro_precision": 0.44128318416978213,
+      "macro_recall": 0.445662037530488,
+      "weighted_f1": 0.45624763512209116,
+      "weighted_precision": 0.46768229296476715,
+      "weighted_recall": 0.4530769230769231
+    },
+    "test_confusion_matrix": [
+      [
+        203,
+        82,
+        117
+      ],
+      [
+        93,
+        112,
+        94
+      ],
+      [
+        194,
+        131,
+        274
+      ]
+    ],
+    "test_confidence_mean": 0.47099423468704155,
+    "test_confidence_std": 0.11254560389997807,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.4142857142857143,
+        "recall": 0.5049751243781094,
+        "f1-score": 0.4551569506726457,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.3446153846153846,
+        "recall": 0.3745819397993311,
+        "f1-score": 0.358974358974359,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5649484536082474,
+        "recall": 0.4574290484140234,
+        "f1-score": 0.5055350553505535,
+        "support": 599.0
+      },
+      "accuracy": 0.4530769230769231,
+      "macro avg": {
+        "precision": 0.44128318416978213,
+        "recall": 0.445662037530488,
+        "f1-score": 0.4398887883325194,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.46768229296476715,
+        "recall": 0.4530769230769231,
+        "f1-score": 0.45624763512209116,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.414     0.505     0.455       402\n           1      0.345     0.375     0.359       299\n           2      0.565     0.457     0.506       599\n\n    accuracy                          0.453      1300\n   macro avg      0.441     0.446     0.440      1300\nweighted avg      0.468     0.453     0.456      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1162.559027671814,
+    "run_time_minutes": 19.37598379453023
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 490,
+      "2": 485,
+      "1": 325
+    },
+    "class_0_avg_probability": 0.2908193906430772,
+    "class_1_avg_probability": 0.31616371624035294,
+    "class_2_avg_probability": 0.39301689311656973,
+    "svm_num_support_vectors": 2687
+  }
+}

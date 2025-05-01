@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": true,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_lex_vader_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5112128625997392,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.4846153846153846,
+      "mae": 0.7676923076923077,
+      "macro_f1": 0.4776497026180964,
+      "macro_precision": 0.4824964568750419,
+      "macro_recall": 0.4843324411586029,
+      "weighted_f1": 0.48856688635605827,
+      "weighted_precision": 0.5058981838217019,
+      "weighted_recall": 0.4846153846153846
+    },
+    "test_confusion_matrix": [
+      [
+        212,
+        67,
+        123
+      ],
+      [
+        106,
+        136,
+        57
+      ],
+      [
+        205,
+        112,
+        282
+      ]
+    ],
+    "test_confidence_mean": 0.46010672560010246,
+    "test_confidence_std": 0.11084679917180172,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.40535372848948376,
+        "recall": 0.527363184079602,
+        "f1-score": 0.45837837837837836,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.43174603174603177,
+        "recall": 0.45484949832775917,
+        "f1-score": 0.44299674267100975,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.6103896103896104,
+        "recall": 0.4707846410684474,
+        "f1-score": 0.5315739868049011,
+        "support": 599.0
+      },
+      "accuracy": 0.4846153846153846,
+      "macro avg": {
+        "precision": 0.4824964568750419,
+        "recall": 0.4843324411586029,
+        "f1-score": 0.4776497026180964,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.5058981838217019,
+        "recall": 0.4846153846153846,
+        "f1-score": 0.48856688635605827,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.405     0.527     0.458       402\n           1      0.432     0.455     0.443       299\n           2      0.610     0.471     0.532       599\n\n    accuracy                          0.485      1300\n   macro avg      0.482     0.484     0.478      1300\nweighted avg      0.506     0.485     0.489      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1004.5120904445648,
+    "run_time_minutes": 16.74186817407608
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 523,
+      "2": 462,
+      "1": 315
+    },
+    "class_0_avg_probability": 0.3142891934176388,
+    "class_1_avg_probability": 0.2808263072514733,
+    "class_2_avg_probability": 0.40488449933088794,
+    "svm_num_support_vectors": 2686
+  }
+}

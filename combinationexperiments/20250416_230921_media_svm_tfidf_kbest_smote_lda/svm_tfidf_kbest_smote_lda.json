@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": true,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_smote_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5745258309560838,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.4123076923076923,
+      "mae": 0.8538461538461538,
+      "macro_f1": 0.3886993323314178,
+      "macro_precision": 0.39040745162696383,
+      "macro_recall": 0.3911852390319097,
+      "weighted_f1": 0.41322309554629993,
+      "weighted_precision": 0.41845977249767113,
+      "weighted_recall": 0.4123076923076923
+    },
+    "test_confusion_matrix": [
+      [
+        181,
+        89,
+        132
+      ],
+      [
+        97,
+        78,
+        124
+      ],
+      [
+        214,
+        108,
+        277
+      ]
+    ],
+    "test_confidence_mean": 0.5122075174364078,
+    "test_confidence_std": 0.1421387320191083,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.3678861788617886,
+        "recall": 0.4502487562189055,
+        "f1-score": 0.40492170022371365,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.28363636363636363,
+        "recall": 0.2608695652173913,
+        "f1-score": 0.27177700348432055,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5196998123827392,
+        "recall": 0.46243739565943237,
+        "f1-score": 0.48939929328621906,
+        "support": 599.0
+      },
+      "accuracy": 0.4123076923076923,
+      "macro avg": {
+        "precision": 0.39040745162696383,
+        "recall": 0.3911852390319097,
+        "f1-score": 0.3886993323314178,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.41845977249767113,
+        "recall": 0.4123076923076923,
+        "f1-score": 0.41322309554629993,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.368     0.450     0.405       402\n           1      0.284     0.261     0.272       299\n           2      0.520     0.462     0.489       599\n\n    accuracy                          0.412      1300\n   macro avg      0.390     0.391     0.389      1300\nweighted avg      0.418     0.412     0.413      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1210.0556926727295,
+    "run_time_minutes": 20.167594877878823
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 533,
+      "0": 492,
+      "1": 275
+    },
+    "class_0_avg_probability": 0.2888486005481597,
+    "class_1_avg_probability": 0.2947462993110452,
+    "class_2_avg_probability": 0.41640510014079507,
+    "svm_num_support_vectors": 2636
+  }
+}

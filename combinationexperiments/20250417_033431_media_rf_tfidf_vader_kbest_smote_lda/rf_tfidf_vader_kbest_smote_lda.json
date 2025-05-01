@@ -1,0 +1,132 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "rf",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": true,
+      "use_smote": true,
+      "use_scaler": false,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/rf/tfidf_kbest_vader_smote_lda"
+    },
+    "best_params": {
+      "clf__class_weight": "balanced",
+      "clf__max_depth": 15,
+      "clf__min_samples_leaf": 5,
+      "clf__min_samples_split": 2,
+      "clf__n_estimators": 300,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 5000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 942,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.7108780709054036,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.5207692307692308,
+      "mae": 0.7469230769230769,
+      "macro_f1": 0.4726547886267614,
+      "macro_precision": 0.5350035297295338,
+      "macro_recall": 0.4700912711240329,
+      "weighted_f1": 0.5036185443363597,
+      "weighted_precision": 0.53127498308794,
+      "weighted_recall": 0.5207692307692308
+    },
+    "test_confusion_matrix": [
+      [
+        199,
+        14,
+        189
+      ],
+      [
+        79,
+        70,
+        150
+      ],
+      [
+        159,
+        32,
+        408
+      ]
+    ],
+    "test_confidence_mean": 0.43713483403667835,
+    "test_confidence_std": 0.06760336796507418,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.45537757437070936,
+        "recall": 0.49502487562189057,
+        "f1-score": 0.47437425506555425,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.603448275862069,
+        "recall": 0.23411371237458195,
+        "f1-score": 0.3373493975903614,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5461847389558233,
+        "recall": 0.6811352253756261,
+        "f1-score": 0.6062407132243685,
+        "support": 599.0
+      },
+      "accuracy": 0.5207692307692308,
+      "macro avg": {
+        "precision": 0.5350035297295338,
+        "recall": 0.4700912711240329,
+        "f1-score": 0.4726547886267614,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.53127498308794,
+        "recall": 0.5207692307692308,
+        "f1-score": 0.5036185443363597,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.455     0.495     0.474       402\n           1      0.603     0.234     0.337       299\n           2      0.546     0.681     0.606       599\n\n    accuracy                          0.521      1300\n   macro avg      0.535     0.470     0.473      1300\nweighted avg      0.531     0.521     0.504      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 118.89469146728516,
+    "run_time_minutes": 1.9815781911214192
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 747,
+      "0": 437,
+      "1": 116
+    },
+    "class_0_avg_probability": 0.3371234099107514,
+    "class_1_avg_probability": 0.28122328402010094,
+    "class_2_avg_probability": 0.38165330606914777,
+    "rf_avg_tree_depth": 15.0
+  }
+}

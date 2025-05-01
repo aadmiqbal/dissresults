@@ -1,0 +1,131 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": false,
+      "use_smote": true,
+      "use_scaler": false,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_lex_smote_lda"
+    },
+    "best_params": {
+      "clf__C": 2.0540519425388433,
+      "clf__class_weight": "balanced",
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 20,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1429,
+      "select__score_func": "chi2"
+    },
+    "best_cv_score": 0.5407766269129537,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.45076923076923076,
+      "mae": 0.796923076923077,
+      "macro_f1": 0.3454351109721199,
+      "macro_precision": 0.37365997884185465,
+      "macro_recall": 0.3697684389297818,
+      "weighted_f1": 0.3992984986032378,
+      "weighted_precision": 0.4040659072036333,
+      "weighted_recall": 0.45076923076923076
+    },
+    "test_confusion_matrix": [
+      [
+        68,
+        67,
+        267
+      ],
+      [
+        62,
+        45,
+        192
+      ],
+      [
+        55,
+        71,
+        473
+      ]
+    ],
+    "test_confidence_mean": 0.6462110410675151,
+    "test_confidence_std": 0.24024609195203403,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.3675675675675676,
+        "recall": 0.1691542288557214,
+        "f1-score": 0.23168654173764908,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.2459016393442623,
+        "recall": 0.1505016722408027,
+        "f1-score": 0.18672199170124482,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5075107296137339,
+        "recall": 0.7896494156928213,
+        "f1-score": 0.6178967994774657,
+        "support": 599.0
+      },
+      "accuracy": 0.45076923076923076,
+      "macro avg": {
+        "precision": 0.37365997884185465,
+        "recall": 0.3697684389297818,
+        "f1-score": 0.3454351109721199,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.4040659072036333,
+        "recall": 0.45076923076923076,
+        "f1-score": 0.3992984986032378,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.368     0.169     0.232       402\n           1      0.246     0.151     0.187       299\n           2      0.508     0.790     0.618       599\n\n    accuracy                          0.451      1300\n   macro avg      0.374     0.370     0.345      1300\nweighted avg      0.404     0.451     0.399      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1327.8837940692902,
+    "run_time_minutes": 22.131396567821504
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 932,
+      "0": 185,
+      "1": 183
+    },
+    "class_0_avg_probability": 0.08292829412238956,
+    "class_1_avg_probability": 0.20551390105521233,
+    "class_2_avg_probability": 0.7115578048223979,
+    "svm_num_support_vectors": 2769
+  }
+}

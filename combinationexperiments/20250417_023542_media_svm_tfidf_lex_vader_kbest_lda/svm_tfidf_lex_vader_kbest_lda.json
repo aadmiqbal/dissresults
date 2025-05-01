@@ -1,0 +1,135 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": true,
+      "use_smote": false,
+      "use_scaler": true,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_lex_vader_scaler_lda"
+    },
+    "best_params": {
+      "clf__C": 0.028585493941961904,
+      "clf__class_weight": {
+        "0": 1.0,
+        "1": 2.0,
+        "2": 1.0
+      },
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1799,
+      "select__score_func": "f_classif"
+    },
+    "best_cv_score": 0.5659561131481622,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.45,
+      "mae": 0.79,
+      "macro_f1": 0.41329834672281657,
+      "macro_precision": 0.4164912437189665,
+      "macro_recall": 0.4164146224209557,
+      "weighted_f1": 0.4482522825660557,
+      "weighted_precision": 0.4521196592632236,
+      "weighted_recall": 0.45
+    },
+    "test_confusion_matrix": [
+      [
+        194,
+        76,
+        132
+      ],
+      [
+        131,
+        68,
+        100
+      ],
+      [
+        180,
+        96,
+        323
+      ]
+    ],
+    "test_confidence_mean": 0.5076831179421889,
+    "test_confidence_std": 0.1379204792960339,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.38415841584158417,
+        "recall": 0.48258706467661694,
+        "f1-score": 0.42778390297684676,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.2833333333333333,
+        "recall": 0.22742474916387959,
+        "f1-score": 0.2523191094619666,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.581981981981982,
+        "recall": 0.5392320534223706,
+        "f1-score": 0.5597920277296361,
+        "support": 599.0
+      },
+      "accuracy": 0.45,
+      "macro avg": {
+        "precision": 0.4164912437189665,
+        "recall": 0.4164146224209557,
+        "f1-score": 0.41329834672281657,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.4521196592632236,
+        "recall": 0.45,
+        "f1-score": 0.4482522825660557,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.384     0.483     0.428       402\n           1      0.283     0.227     0.252       299\n           2      0.582     0.539     0.560       599\n\n    accuracy                          0.450      1300\n   macro avg      0.416     0.416     0.413      1300\nweighted avg      0.452     0.450     0.448      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 1158.1159794330597,
+    "run_time_minutes": 19.301932990550995
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 555,
+      "0": 505,
+      "1": 240
+    },
+    "class_0_avg_probability": 0.30919415951001095,
+    "class_1_avg_probability": 0.2423443284156817,
+    "class_2_avg_probability": 0.4484615120743073,
+    "svm_num_support_vectors": 2628
+  }
+}

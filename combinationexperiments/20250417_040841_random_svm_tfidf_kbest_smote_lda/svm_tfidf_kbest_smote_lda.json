@@ -1,0 +1,132 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": true,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_smote": true,
+      "use_scaler": false,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_custom.csv",
+      "sentiment_csv_path": "precomputed_sentiment_custom.csv",
+      "bias_csv_path": "precomputed_bias_custom.csv",
+      "results_dir": "experiments/svm/tfidf_kbest_brand_smote_lda"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1879,
+      "select__score_func": "chi2"
+    },
+    "best_cv_score": 0.49230202490663866,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.49615384615384617,
+      "mae": 0.7392307692307692,
+      "macro_f1": 0.421324989699261,
+      "macro_precision": 0.442880124962024,
+      "macro_recall": 0.43234946422987486,
+      "weighted_f1": 0.4625359290827603,
+      "weighted_precision": 0.4640370144274544,
+      "weighted_recall": 0.49615384615384617
+    },
+    "test_confusion_matrix": [
+      [
+        87,
+        75,
+        240
+      ],
+      [
+        74,
+        89,
+        136
+      ],
+      [
+        66,
+        64,
+        469
+      ]
+    ],
+    "test_confidence_mean": 0.5267567791851664,
+    "test_confidence_std": 0.155106208084084,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.3832599118942731,
+        "recall": 0.21641791044776118,
+        "f1-score": 0.2766295707472178,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.39035087719298245,
+        "recall": 0.2976588628762542,
+        "f1-score": 0.3377609108159393,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5550295857988166,
+        "recall": 0.7829716193656093,
+        "f1-score": 0.649584487534626,
+        "support": 599.0
+      },
+      "accuracy": 0.49615384615384617,
+      "macro avg": {
+        "precision": 0.442880124962024,
+        "recall": 0.43234946422987486,
+        "f1-score": 0.421324989699261,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.4640370144274544,
+        "recall": 0.49615384615384617,
+        "f1-score": 0.4625359290827603,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.383     0.216     0.277       402\n           1      0.390     0.298     0.338       299\n           2      0.555     0.783     0.650       599\n\n    accuracy                          0.496      1300\n   macro avg      0.443     0.432     0.421      1300\nweighted avg      0.464     0.496     0.463      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 996.5311024188995,
+    "run_time_minutes": 16.60885170698166
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 845,
+      "1": 228,
+      "0": 227
+    },
+    "class_0_avg_probability": 0.18025580579635497,
+    "class_1_avg_probability": 0.2670839087237004,
+    "class_2_avg_probability": 0.5526602854799445,
+    "svm_num_support_vectors": 2809,
+    "brand_removal_enabled": true
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "rf",
+      "embedding_type": "tfidf",
+      "use_select_kbest": true,
+      "brand_removal": false,
+      "use_lexical_syntactic": true,
+      "use_vader_sentiment": false,
+      "use_smote": false,
+      "use_scaler": false,
+      "use_lda": true,
+      "save_interesting_articles": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv",
+      "results_dir": "experiments/rf/tfidf_kbest_lex_lda"
+    },
+    "best_params": {
+      "clf__class_weight": "balanced",
+      "clf__max_depth": 15,
+      "clf__min_samples_leaf": 2,
+      "clf__min_samples_split": 2,
+      "clf__n_estimators": 500,
+      "features__lda__lda__doc_topic_prior": null,
+      "features__lda__lda__n_components": 10,
+      "features__lda__lda__topic_word_prior": null,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "select__k": 1828,
+      "select__score_func": "chi2"
+    },
+    "best_cv_score": 0.7180681477941566,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.5130769230769231,
+      "mae": 0.7484615384615385,
+      "macro_f1": 0.445006200633806,
+      "macro_precision": 0.51160719421288,
+      "macro_recall": 0.45548945056831336,
+      "weighted_f1": 0.4866930705427161,
+      "weighted_precision": 0.5168628916574928,
+      "weighted_recall": 0.5130769230769231
+    },
+    "test_confusion_matrix": [
+      [
+        215,
+        7,
+        180
+      ],
+      [
+        112,
+        46,
+        141
+      ],
+      [
+        160,
+        33,
+        406
+      ]
+    ],
+    "test_confidence_mean": 0.4240516892285796,
+    "test_confidence_std": 0.06023632075316779,
+    "classification_report_dict": {
+      "0": {
+        "precision": 0.4414784394250513,
+        "recall": 0.5348258706467661,
+        "f1-score": 0.48368953880764903,
+        "support": 402.0
+      },
+      "1": {
+        "precision": 0.5348837209302325,
+        "recall": 0.15384615384615385,
+        "f1-score": 0.23896103896103896,
+        "support": 299.0
+      },
+      "2": {
+        "precision": 0.5584594222833562,
+        "recall": 0.67779632721202,
+        "f1-score": 0.6123680241327301,
+        "support": 599.0
+      },
+      "accuracy": 0.5130769230769231,
+      "macro avg": {
+        "precision": 0.51160719421288,
+        "recall": 0.45548945056831336,
+        "f1-score": 0.445006200633806,
+        "support": 1300.0
+      },
+      "weighted avg": {
+        "precision": 0.5168628916574928,
+        "recall": 0.5130769230769231,
+        "f1-score": 0.4866930705427161,
+        "support": 1300.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n           0      0.441     0.535     0.484       402\n           1      0.535     0.154     0.239       299\n           2      0.558     0.678     0.612       599\n\n    accuracy                          0.513      1300\n   macro avg      0.512     0.455     0.445      1300\nweighted avg      0.517     0.513     0.487      1300\n"
+  },
+  "timing": {
+    "run_time_seconds": 291.61609172821045,
+    "run_time_minutes": 4.860268195470174
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 727,
+      "0": 487,
+      "1": 86
+    },
+    "class_0_avg_probability": 0.3462474895737077,
+    "class_1_avg_probability": 0.2864924769826547,
+    "class_2_avg_probability": 0.3672600334436462,
+    "rf_avg_tree_depth": 15.0
+  }
+}
