@@ -1,0 +1,230 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "rf",
+      "embedding_type": "tfidf",
+      "brand_removal": false,
+      "use_select_kbest": false,
+      "use_smote": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_lda": false,
+      "save_interesting_articles": false,
+      "use_scaler": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv"
+    },
+    "best_params": {
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ],
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__max_features": 5000,
+      "features__text__vectorizer__max_df": 0.8,
+      "clf__n_estimators": 200,
+      "clf__min_samples_split": 2,
+      "clf__min_samples_leaf": 1,
+      "clf__max_depth": 15,
+      "clf__class_weight": "balanced"
+    },
+    "best_cv_score": 0.6668570401857243,
+    "split_mode": "random"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.6615384615384615,
+      "mae": 0.5461538461538461,
+      "macro_f1": 0.6609157453745436,
+      "macro_precision": 0.6588781186594225,
+      "macro_recall": 0.6667556267273079,
+      "weighted_f1": 0.6584294412948754,
+      "weighted_precision": 0.6584676887676715,
+      "weighted_recall": 0.6615384615384615
+    },
+    "test_confusion_matrix": [
+      [
+        213,
+        43,
+        146
+      ],
+      [
+        11,
+        233,
+        55
+      ],
+      [
+        124,
+        61,
+        414
+      ]
+    ],
+    "test_confidence_mean": 0.40674939237992136,
+    "test_confidence_std": 0.041483956645616105,
+    "subgroup_source": {},
+    "subgroup_topic": {
+      "palestine": {
+        "accuracy": 0.8571428571428571,
+        "macro_f1": 0.8412698412698413,
+        "num_samples": 7
+      },
+      "federal_budget": {
+        "accuracy": 0.5882352941176471,
+        "macro_f1": 0.5411255411255411,
+        "num_samples": 51
+      },
+      "fbi": {
+        "accuracy": 0.7142857142857143,
+        "macro_f1": 0.6551578502798016,
+        "num_samples": 70
+      },
+      "politics": {
+        "accuracy": 0.6549520766773163,
+        "macro_f1": 0.6520634370608757,
+        "num_samples": 626
+      },
+      "media_bias": {
+        "accuracy": 0.7669172932330827,
+        "macro_f1": 0.5650246305418719,
+        "num_samples": 133
+      },
+      "labor": {
+        "accuracy": 0.8,
+        "macro_f1": 0.5299145299145299,
+        "num_samples": 10
+      },
+      "education": {
+        "accuracy": 0.6206896551724138,
+        "macro_f1": 0.5296296296296297,
+        "num_samples": 29
+      },
+      "lgbt_rights": {
+        "accuracy": 0.6027397260273972,
+        "macro_f1": 0.537780497756018,
+        "num_samples": 73
+      },
+      "race_and_racism": {
+        "accuracy": 0.6226415094339622,
+        "macro_f1": 0.6232763532763533,
+        "num_samples": 106
+      },
+      "cybersecurity": {
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.6444444444444444,
+        "num_samples": 24
+      },
+      "great_britain": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "num_samples": 6
+      },
+      "national_defense": {
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.6565079365079365,
+        "num_samples": 36
+      },
+      "us_military": {
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.7777777777777777,
+        "num_samples": 6
+      },
+      "justice_department": {
+        "accuracy": 0.14285714285714285,
+        "macro_f1": 0.08333333333333333,
+        "num_samples": 14
+      },
+      "nuclear_weapons": {
+        "accuracy": 0.6190476190476191,
+        "macro_f1": 0.4981481481481482,
+        "num_samples": 21
+      },
+      "supreme_court": {
+        "accuracy": 0.8571428571428571,
+        "macro_f1": 0.8282828282828283,
+        "num_samples": 21
+      },
+      "banking_and_finance": {
+        "accuracy": 0.875,
+        "macro_f1": 0.7948717948717949,
+        "num_samples": 8
+      },
+      "culture": {
+        "accuracy": 0.6,
+        "macro_f1": 0.2857142857142857,
+        "num_samples": 5
+      },
+      "treasury": {
+        "accuracy": 0.5,
+        "macro_f1": 0.4857142857142857,
+        "num_samples": 6
+      },
+      "republican_party": {
+        "accuracy": 0.8461538461538461,
+        "macro_f1": 0.4583333333333333,
+        "num_samples": 13
+      },
+      "gun_control_and_gun_rights": {
+        "accuracy": 0.9166666666666666,
+        "macro_f1": 0.4782608695652174,
+        "num_samples": 12
+      },
+      "environment": {
+        "accuracy": 0.5,
+        "macro_f1": 0.4222222222222222,
+        "num_samples": 8
+      },
+      "opioid_crisis": {
+        "accuracy": 0.25,
+        "macro_f1": 0.3333333333333333,
+        "num_samples": 4
+      },
+      "polarization": {
+        "accuracy": 0.25,
+        "macro_f1": 0.13333333333333333,
+        "num_samples": 4
+      },
+      "justice": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 4
+      },
+      "trade": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 1
+      },
+      "mexico": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "num_samples": 2
+      }
+    }
+  },
+  "timing": {
+    "run_time_seconds": 45.805485010147095,
+    "run_time_minutes": 0.7634247501691183
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10240,
+      "0": 9750,
+      "1": 7988
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "2": 615,
+      "0": 348,
+      "1": 337
+    },
+    "class_0_avg_probability": 0.3287659418557055,
+    "class_1_avg_probability": 0.3158727311214119,
+    "class_2_avg_probability": 0.35536132702288564,
+    "rf_avg_tree_depth": 15.0
+  }
+}

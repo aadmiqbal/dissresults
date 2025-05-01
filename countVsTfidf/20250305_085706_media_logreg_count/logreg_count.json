@@ -1,0 +1,232 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "logreg",
+      "embedding_type": "count",
+      "brand_removal": false,
+      "use_select_kbest": false,
+      "use_smote": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_lda": false,
+      "save_interesting_articles": false,
+      "use_scaler": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv"
+    },
+    "best_params": {
+      "clf__C": 0.0902200446856562,
+      "clf__class_weight": "balanced",
+      "clf__max_iter": 2000,
+      "clf__penalty": "l1",
+      "clf__solver": "saga",
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 10000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ]
+    },
+    "best_cv_score": 0.7638828512604346,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.5161538461538462,
+      "mae": 0.6938461538461539,
+      "macro_f1": 0.49926717410417004,
+      "macro_precision": 0.5027984442344836,
+      "macro_recall": 0.5034607986786558,
+      "weighted_f1": 0.5206818211973971,
+      "weighted_precision": 0.5340807439660129,
+      "weighted_recall": 0.5161538461538462
+    },
+    "test_confusion_matrix": [
+      [
+        221,
+        75,
+        106
+      ],
+      [
+        112,
+        125,
+        62
+      ],
+      [
+        167,
+        107,
+        325
+      ]
+    ],
+    "test_confidence_mean": 0.6850680368534662,
+    "test_confidence_std": 0.1836060769880436,
+    "subgroup_source": {},
+    "subgroup_topic": {
+      "media_bias": {
+        "accuracy": 0.6390977443609023,
+        "macro_f1": 0.36024003097173835,
+        "num_samples": 133
+      },
+      "culture": {
+        "accuracy": 0.2,
+        "macro_f1": 0.16666666666666666,
+        "num_samples": 5
+      },
+      "federal_budget": {
+        "accuracy": 0.5294117647058824,
+        "macro_f1": 0.3141141141141141,
+        "num_samples": 51
+      },
+      "opioid_crisis": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 4
+      },
+      "politics": {
+        "accuracy": 0.549520766773163,
+        "macro_f1": 0.5396141155744307,
+        "num_samples": 626
+      },
+      "education": {
+        "accuracy": 0.5862068965517241,
+        "macro_f1": 0.4215686274509804,
+        "num_samples": 29
+      },
+      "race_and_racism": {
+        "accuracy": 0.41509433962264153,
+        "macro_f1": 0.4060320407531719,
+        "num_samples": 106
+      },
+      "environment": {
+        "accuracy": 0.625,
+        "macro_f1": 0.4646464646464647,
+        "num_samples": 8
+      },
+      "lgbt_rights": {
+        "accuracy": 0.4657534246575342,
+        "macro_f1": 0.3968814968814969,
+        "num_samples": 73
+      },
+      "fbi": {
+        "accuracy": 0.4714285714285714,
+        "macro_f1": 0.45099387853359924,
+        "num_samples": 70
+      },
+      "gun_control_and_gun_rights": {
+        "accuracy": 0.75,
+        "macro_f1": 0.2857142857142857,
+        "num_samples": 12
+      },
+      "national_defense": {
+        "accuracy": 0.4166666666666667,
+        "macro_f1": 0.42962962962962964,
+        "num_samples": 36
+      },
+      "cybersecurity": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.3135534915720674,
+        "num_samples": 24
+      },
+      "supreme_court": {
+        "accuracy": 0.19047619047619047,
+        "macro_f1": 0.21798941798941798,
+        "num_samples": 21
+      },
+      "labor": {
+        "accuracy": 0.3,
+        "macro_f1": 0.35000000000000003,
+        "num_samples": 10
+      },
+      "justice_department": {
+        "accuracy": 0.42857142857142855,
+        "macro_f1": 0.19999999999999998,
+        "num_samples": 14
+      },
+      "us_military": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.2222222222222222,
+        "num_samples": 6
+      },
+      "nuclear_weapons": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.24206349206349206,
+        "num_samples": 21
+      },
+      "republican_party": {
+        "accuracy": 0.6153846153846154,
+        "macro_f1": 0.25396825396825395,
+        "num_samples": 13
+      },
+      "palestine": {
+        "accuracy": 0.8571428571428571,
+        "macro_f1": 0.6,
+        "num_samples": 7
+      },
+      "polarization": {
+        "accuracy": 0.25,
+        "macro_f1": 0.13333333333333333,
+        "num_samples": 4
+      },
+      "banking_and_finance": {
+        "accuracy": 0.125,
+        "macro_f1": 0.08333333333333333,
+        "num_samples": 8
+      },
+      "great_britain": {
+        "accuracy": 0.5,
+        "macro_f1": 0.25,
+        "num_samples": 6
+      },
+      "justice": {
+        "accuracy": 0.75,
+        "macro_f1": 0.42857142857142855,
+        "num_samples": 4
+      },
+      "trade": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "num_samples": 1
+      },
+      "treasury": {
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.6296296296296297,
+        "num_samples": 6
+      },
+      "mexico": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 2
+      }
+    }
+  },
+  "timing": {
+    "run_time_seconds": 5696.872371673584,
+    "run_time_minutes": 94.9478728612264
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 500,
+      "2": 493,
+      "1": 307
+    },
+    "class_0_avg_probability": 0.37682011625561923,
+    "class_1_avg_probability": 0.25886653332247944,
+    "class_2_avg_probability": 0.3643133504219014,
+    "logreg_n_iter": [
+      2000
+    ]
+  }
+}

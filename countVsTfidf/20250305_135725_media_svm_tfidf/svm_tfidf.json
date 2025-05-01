@@ -1,0 +1,229 @@
+{
+  "experiment_setup": {
+    "config": {
+      "classifier_type": "svm",
+      "embedding_type": "tfidf",
+      "brand_removal": false,
+      "use_select_kbest": false,
+      "use_smote": false,
+      "use_lexical_syntactic": false,
+      "use_vader_sentiment": false,
+      "use_lda": false,
+      "save_interesting_articles": false,
+      "use_scaler": false,
+      "use_bias_features": false,
+      "lexical_csv_path": "precomputed_lexical_default.csv",
+      "sentiment_csv_path": "precomputed_sentiment_default.csv",
+      "bias_csv_path": "precomputed_bias_default.csv"
+    },
+    "best_params": {
+      "clf__C": 0.6894481952587265,
+      "clf__class_weight": null,
+      "clf__kernel": "linear",
+      "clf__max_iter": 500,
+      "features__text__vectorizer__max_df": 0.8,
+      "features__text__vectorizer__max_features": 5000,
+      "features__text__vectorizer__min_df": 1,
+      "features__text__vectorizer__ngram_range": [
+        1,
+        2
+      ]
+    },
+    "best_cv_score": 0.5907680929542075,
+    "split_mode": "media"
+  },
+  "performance_summary": {
+    "test_metrics": {
+      "accuracy": 0.39,
+      "mae": 0.9115384615384615,
+      "macro_f1": 0.3776370028881038,
+      "macro_precision": 0.4110612580937862,
+      "macro_recall": 0.4163668205668771,
+      "weighted_f1": 0.3688341751510518,
+      "weighted_precision": 0.4340290402951501,
+      "weighted_recall": 0.39
+    },
+    "test_confusion_matrix": [
+      [
+        267,
+        77,
+        58
+      ],
+      [
+        130,
+        110,
+        59
+      ],
+      [
+        334,
+        135,
+        130
+      ]
+    ],
+    "test_confidence_mean": 0.48523706896170876,
+    "test_confidence_std": 0.15035555085716473,
+    "subgroup_source": {},
+    "subgroup_topic": {
+      "media_bias": {
+        "accuracy": 0.2781954887218045,
+        "macro_f1": 0.21128539719304051,
+        "num_samples": 133
+      },
+      "culture": {
+        "accuracy": 0.6,
+        "macro_f1": 0.5833333333333333,
+        "num_samples": 5
+      },
+      "federal_budget": {
+        "accuracy": 0.6470588235294118,
+        "macro_f1": 0.34722222222222227,
+        "num_samples": 51
+      },
+      "opioid_crisis": {
+        "accuracy": 0.25,
+        "macro_f1": 0.16666666666666666,
+        "num_samples": 4
+      },
+      "politics": {
+        "accuracy": 0.3801916932907348,
+        "macro_f1": 0.36670939562265586,
+        "num_samples": 626
+      },
+      "education": {
+        "accuracy": 0.1724137931034483,
+        "macro_f1": 0.17216117216117213,
+        "num_samples": 29
+      },
+      "race_and_racism": {
+        "accuracy": 0.36792452830188677,
+        "macro_f1": 0.3397724383422324,
+        "num_samples": 106
+      },
+      "environment": {
+        "accuracy": 0.875,
+        "macro_f1": 0.7948717948717949,
+        "num_samples": 8
+      },
+      "lgbt_rights": {
+        "accuracy": 0.3972602739726027,
+        "macro_f1": 0.33009453781512604,
+        "num_samples": 73
+      },
+      "fbi": {
+        "accuracy": 0.2571428571428571,
+        "macro_f1": 0.2588383838383838,
+        "num_samples": 70
+      },
+      "gun_control_and_gun_rights": {
+        "accuracy": 0.9166666666666666,
+        "macro_f1": 0.4782608695652174,
+        "num_samples": 12
+      },
+      "national_defense": {
+        "accuracy": 0.3611111111111111,
+        "macro_f1": 0.3567901234567901,
+        "num_samples": 36
+      },
+      "cybersecurity": {
+        "accuracy": 0.4166666666666667,
+        "macro_f1": 0.3810916179337232,
+        "num_samples": 24
+      },
+      "supreme_court": {
+        "accuracy": 0.42857142857142855,
+        "macro_f1": 0.3951417004048583,
+        "num_samples": 21
+      },
+      "labor": {
+        "accuracy": 0.3,
+        "macro_f1": 0.26666666666666666,
+        "num_samples": 10
+      },
+      "justice_department": {
+        "accuracy": 0.7857142857142857,
+        "macro_f1": 0.29333333333333333,
+        "num_samples": 14
+      },
+      "us_military": {
+        "accuracy": 0.5,
+        "macro_f1": 0.25,
+        "num_samples": 6
+      },
+      "nuclear_weapons": {
+        "accuracy": 0.38095238095238093,
+        "macro_f1": 0.2611111111111111,
+        "num_samples": 21
+      },
+      "republican_party": {
+        "accuracy": 0.8461538461538461,
+        "macro_f1": 0.3055555555555555,
+        "num_samples": 13
+      },
+      "palestine": {
+        "accuracy": 0.2857142857142857,
+        "macro_f1": 0.14814814814814814,
+        "num_samples": 7
+      },
+      "polarization": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "num_samples": 4
+      },
+      "banking_and_finance": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "num_samples": 8
+      },
+      "great_britain": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.1111111111111111,
+        "num_samples": 6
+      },
+      "justice": {
+        "accuracy": 0.75,
+        "macro_f1": 0.42857142857142855,
+        "num_samples": 4
+      },
+      "trade": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "num_samples": 1
+      },
+      "treasury": {
+        "accuracy": 0.5,
+        "macro_f1": 0.2222222222222222,
+        "num_samples": 6
+      },
+      "mexico": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "num_samples": 2
+      }
+    }
+  },
+  "timing": {
+    "run_time_seconds": 2610.4842166900635,
+    "run_time_minutes": 43.50807027816772
+  },
+  "analysis_info": {
+    "train_class_distribution": {
+      "2": 10241,
+      "0": 8861,
+      "1": 7488
+    },
+    "test_class_distribution": {
+      "2": 599,
+      "0": 402,
+      "1": 299
+    },
+    "pred_class_distribution": {
+      "0": 731,
+      "1": 322,
+      "2": 247
+    },
+    "class_0_avg_probability": 0.34258556961959075,
+    "class_1_avg_probability": 0.2734249739914022,
+    "class_2_avg_probability": 0.38398945638900694,
+    "svm_num_support_vectors": 2749
+  }
+}
