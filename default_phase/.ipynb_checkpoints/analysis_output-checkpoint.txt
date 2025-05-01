@@ -1,0 +1,808 @@
+=== Experiment Comparison Table (Summary) ===
+                                                     experiment_name classifier_type embedding_type split_mode  best_cv_score  accuracy  macro_f1  weighted_f1      mae topic_avg_accuracy topic_avg_macro_f1
+                svm_tfidf_media_use_select_kbest-use_vader_sentiment             svm          tfidf      media       0.584183  0.421538  0.389627     0.417891 0.867692               None               None
+      nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment              nb          tfidf     random       0.645771  0.640769  0.627791     0.635054 0.560769               None               None
+           logreg_tfidf_media_use_select_kbest-use_lexical_syntactic          logreg          tfidf      media       0.757696  0.526154  0.502547     0.529042 0.670000               None               None
+              cnb_tfidf_media_use_select_kbest-use_lexical_syntactic             cnb          tfidf      media       0.688139  0.522308  0.452049     0.497124 0.716923               None               None
+                          cnb_tfidf_media_use_select_kbest-use_smote             cnb          tfidf      media       0.690920  0.526923  0.464067     0.506598 0.705385               None               None
+      svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             svm          tfidf      media       0.580914  0.427692  0.403171     0.426374 0.853077               None               None
+      rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment              rf          tfidf     random       0.671355  0.635385  0.633989     0.630849 0.578462               None               None
+       nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment              nb          tfidf      media       0.681369  0.511538  0.438009     0.481992 0.749231               None               None
+   svm_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic             svm          tfidf     random       0.484712  0.484615  0.447209     0.472067 0.776154               None               None
+                           nb_tfidf_media_use_select_kbest-use_smote              nb          tfidf      media       0.689869  0.513846  0.457698     0.495682 0.734615               None               None
+      xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             xgb          tfidf      media       0.767986  0.563077  0.541195     0.561074 0.644615               None               None
+               xgb_tfidf_random_use_select_kbest-use_vader_sentiment             xgb          tfidf     random       0.731263  0.697692  0.702983     0.697377 0.487692               None               None
+      xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             xgb          tfidf      media       0.767441  0.563077  0.541195     0.561074 0.644615               None               None
+                          nb_tfidf_random_use_select_kbest-use_smote              nb          tfidf     random       0.650937  0.656923  0.645666     0.652005 0.537692               None               None
+                 nb_tfidf_media_use_select_kbest-use_vader_sentiment              nb          tfidf      media       0.680799  0.513846  0.437963     0.483042 0.743846               None               None
+     svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             svm          tfidf     random       0.528791  0.486154  0.483903     0.488898 0.763077               None               None
+logreg_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic          logreg          tfidf     random       0.721899  0.685385  0.685121     0.683925 0.486923               None               None
+              xgb_tfidf_media_use_select_kbest-use_lexical_syntactic             xgb          tfidf      media       0.770941  0.564615  0.536813     0.559749 0.651538               None               None
+       rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment              rf          tfidf      media       0.714451  0.510769  0.464148     0.495183 0.762308               None               None
+                         svm_tfidf_random_use_select_kbest-use_smote             svm          tfidf     random       0.532566  0.459231  0.450457     0.461692 0.807692               None               None
+                          xgb_tfidf_media_use_select_kbest-use_smote             xgb          tfidf      media       0.770371  0.561538  0.535673     0.557871 0.646923               None               None
+      cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             cnb          tfidf      media       0.680289  0.516154  0.443399     0.487951 0.732308               None               None
+      rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment              rf          tfidf     random       0.671322  0.635385  0.633989     0.630849 0.578462               None               None
+   logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment          logreg          tfidf      media       0.771334  0.519231  0.502600     0.523212 0.696154               None               None
+                          svm_tfidf_media_use_select_kbest-use_smote             svm          tfidf      media       0.586612  0.456923  0.432332     0.455395 0.796923               None               None
+          logreg_tfidf_random_use_select_kbest-use_lexical_syntactic          logreg          tfidf     random       0.710727  0.673846  0.671395     0.673937 0.489231               None               None
+     cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             cnb          tfidf     random       0.646632  0.636154  0.625922     0.632389 0.565385               None               None
+     cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             cnb          tfidf     random       0.646632  0.636154  0.625922     0.632389 0.565385               None               None
+                nb_tfidf_random_use_select_kbest-use_vader_sentiment              nb          tfidf     random       0.644455  0.636923  0.623893     0.631324 0.566923               None               None
+                          rf_tfidf_random_use_select_kbest-use_smote              rf          tfidf     random       0.670740  0.631538  0.630027     0.627125 0.585385               None               None
+               nb_tfidf_media_use_select_kbest-use_lexical_syntactic              nb          tfidf      media       0.687514  0.513846  0.450363     0.491634 0.735385               None               None
+                rf_tfidf_random_use_select_kbest-use_vader_sentiment              rf          tfidf     random       0.676088  0.621538  0.624002     0.618030 0.597692               None               None
+                cnb_tfidf_media_use_select_kbest-use_vader_sentiment             cnb          tfidf      media       0.678193  0.511538  0.429293     0.477949 0.739231               None               None
+    nb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic              nb          tfidf     random       0.614563  0.602308  0.599542     0.601594 0.581538               None               None
+                       logreg_tfidf_media_use_select_kbest-use_smote          logreg          tfidf      media       0.754263  0.530000  0.510784     0.533598 0.676154               None               None
+   logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment          logreg          tfidf      media       0.755250  0.523846  0.503292     0.527636 0.675385               None               None
+                      logreg_tfidf_random_use_select_kbest-use_smote          logreg          tfidf     random       0.709213  0.673077  0.673106     0.672345 0.506923               None               None
+                         xgb_tfidf_random_use_select_kbest-use_smote             xgb          tfidf     random       0.726834  0.699231  0.702593     0.697922 0.476154               None               None
+      cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             cnb          tfidf      media       0.680289  0.516154  0.443399     0.487951 0.732308               None               None
+       rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment              rf          tfidf      media       0.714451  0.510769  0.464148     0.495183 0.762308               None               None
+      nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment              nb          tfidf     random       0.645771  0.640769  0.627791     0.635054 0.560769               None               None
+                         cnb_tfidf_random_use_select_kbest-use_smote             cnb          tfidf     random       0.647397  0.653846  0.644003     0.650595 0.528462               None               None
+     svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             svm          tfidf     random       0.382729  0.285385  0.277759     0.272627 0.958462               None               None
+              nb_tfidf_random_use_select_kbest-use_lexical_syntactic              nb          tfidf     random       0.648607  0.647692  0.635602     0.642860 0.551538               None               None
+             svm_tfidf_random_use_select_kbest-use_lexical_syntactic             svm          tfidf     random       0.524758  0.496923  0.487729     0.498590 0.746154               None               None
+               rf_tfidf_media_use_select_kbest-use_lexical_syntactic              rf          tfidf      media       0.720352  0.493077  0.449663     0.478625 0.787692               None               None
+               cnb_tfidf_random_use_select_kbest-use_vader_sentiment             cnb          tfidf     random       0.644445  0.631538  0.618216     0.626947 0.573077               None               None
+      svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment             svm          tfidf      media       0.448120  0.360000  0.301902     0.301330 1.043846               None               None
+       nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment              nb          tfidf      media       0.681369  0.511538  0.438009     0.481992 0.749231               None               None
+ logreg_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic          logreg          tfidf      media       0.767607  0.540769  0.516769     0.543113 0.653846               None               None
+                           rf_tfidf_media_use_select_kbest-use_smote              rf          tfidf      media       0.716099  0.516923  0.477204     0.504424 0.756923               None               None
+            logreg_tfidf_random_use_select_kbest-use_vader_sentiment          logreg          tfidf     random       0.709378  0.680000  0.681646     0.678813 0.501538               None               None
+                xgb_tfidf_media_use_select_kbest-use_vader_sentiment             xgb          tfidf      media       0.770916  0.556923  0.531747     0.553217 0.675385               None               None
+              svm_tfidf_media_use_select_kbest-use_lexical_syntactic             svm          tfidf      media       0.575499  0.420769  0.387600     0.418113 0.836154               None               None
+                 rf_tfidf_media_use_select_kbest-use_vader_sentiment              rf          tfidf      media       0.718788  0.490769  0.445897     0.475910 0.783077               None               None
+  logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment          logreg          tfidf     random       0.709609  0.676923  0.677143     0.675974 0.500769               None               None
+    svm_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic             svm          tfidf      media       0.543913  0.403846  0.359093     0.391450 0.954615               None               None
+             cnb_tfidf_random_use_select_kbest-use_lexical_syntactic             cnb          tfidf     random       0.647196  0.648462  0.637496     0.644715 0.543077               None               None
+  logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment          logreg          tfidf     random       0.725709  0.682308  0.681107     0.681452 0.486923               None               None
+     nb_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic              nb          tfidf      media       0.668821  0.478462  0.440274     0.468040 0.770000               None               None
+               svm_tfidf_random_use_select_kbest-use_vader_sentiment             svm          tfidf     random       0.529330  0.461538  0.446272     0.464204 0.795385               None               None
+             logreg_tfidf_media_use_select_kbest-use_vader_sentiment          logreg          tfidf      media       0.755811  0.522308  0.499606     0.525066 0.674615               None               None
+             xgb_tfidf_random_use_select_kbest-use_lexical_syntactic             xgb          tfidf     random       0.735673  0.706923  0.708217     0.705942 0.463846               None               None
+   cnb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic             cnb          tfidf     random       0.615704  0.617692  0.614031     0.617766 0.550000               None               None
+     xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             xgb          tfidf     random       0.727813  0.699231  0.702672     0.698346 0.473846               None               None
+     xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment             xgb          tfidf     random       0.727952  0.699231  0.702672     0.698346 0.473846               None               None
+              rf_tfidf_random_use_select_kbest-use_lexical_syntactic              rf          tfidf     random       0.682285  0.626154  0.627134     0.622654 0.590769               None               None
+
+=== Additional Analyses ===
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[166  66 170]
+ [102  71 126]
+ [206  82 311]]
+  - True class 0 was correctly classified 166 times, most confused with class 2 (170 times).
+  - True class 1 was correctly classified 71 times, most confused with class 2 (126 times).
+  - True class 2 was correctly classified 311 times, most confused with class 0 (206 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[188  49 165]
+ [ 26 201  72]
+ [ 97  58 444]]
+  - True class 0 was correctly classified 188 times, most confused with class 2 (165 times).
+  - True class 1 was correctly classified 201 times, most confused with class 2 (72 times).
+  - True class 2 was correctly classified 444 times, most confused with class 0 (97 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[227  74 101]
+ [113 113  73]
+ [154 101 344]]
+  - True class 0 was correctly classified 227 times, most confused with class 2 (101 times).
+  - True class 1 was correctly classified 113 times, most confused with class 0 (113 times).
+  - True class 2 was correctly classified 344 times, most confused with class 0 (154 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[212  22 168]
+ [121  48 130]
+ [143  37 419]]
+  - True class 0 was correctly classified 212 times, most confused with class 2 (168 times).
+  - True class 1 was correctly classified 48 times, most confused with class 2 (130 times).
+  - True class 2 was correctly classified 419 times, most confused with class 0 (143 times).
+
+No topic performance data for cnb_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[227  26 149]
+ [127  54 118]
+ [153  42 404]]
+  - True class 0 was correctly classified 227 times, most confused with class 2 (149 times).
+  - True class 1 was correctly classified 54 times, most confused with class 0 (127 times).
+  - True class 2 was correctly classified 404 times, most confused with class 0 (153 times).
+
+No topic performance data for cnb_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[178  71 153]
+ [ 89  82 128]
+ [212  91 296]]
+  - True class 0 was correctly classified 178 times, most confused with class 2 (153 times).
+  - True class 1 was correctly classified 82 times, most confused with class 2 (128 times).
+  - True class 2 was correctly classified 296 times, most confused with class 0 (212 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[199  46 157]
+ [ 13 238  48]
+ [121  89 389]]
+  - True class 0 was correctly classified 199 times, most confused with class 2 (157 times).
+  - True class 1 was correctly classified 238 times, most confused with class 2 (48 times).
+  - True class 2 was correctly classified 389 times, most confused with class 0 (121 times).
+
+No topic performance data for rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[208  12 182]
+ [103  42 154]
+ [157  27 415]]
+  - True class 0 was correctly classified 208 times, most confused with class 2 (182 times).
+  - True class 1 was correctly classified 42 times, most confused with class 2 (154 times).
+  - True class 2 was correctly classified 415 times, most confused with class 0 (157 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[127  53 222]
+ [ 54 108 137]
+ [117  87 395]]
+  - True class 0 was correctly classified 127 times, most confused with class 2 (222 times).
+  - True class 1 was correctly classified 108 times, most confused with class 2 (137 times).
+  - True class 2 was correctly classified 395 times, most confused with class 0 (117 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[231  25 146]
+ [116  56 127]
+ [177  41 381]]
+  - True class 0 was correctly classified 231 times, most confused with class 2 (146 times).
+  - True class 1 was correctly classified 56 times, most confused with class 2 (127 times).
+  - True class 2 was correctly classified 381 times, most confused with class 0 (177 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[237  49 116]
+ [ 71 122 106]
+ [154  72 373]]
+  - True class 0 was correctly classified 237 times, most confused with class 2 (116 times).
+  - True class 1 was correctly classified 122 times, most confused with class 2 (106 times).
+  - True class 2 was correctly classified 373 times, most confused with class 0 (154 times).
+
+No topic performance data for xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: xgb_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[273  24 105]
+ [ 21 238  40]
+ [136  67 396]]
+  - True class 0 was correctly classified 273 times, most confused with class 2 (105 times).
+  - True class 1 was correctly classified 238 times, most confused with class 2 (40 times).
+  - True class 2 was correctly classified 396 times, most confused with class 0 (136 times).
+
+No topic performance data for xgb_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[237  49 116]
+ [ 71 122 106]
+ [154  72 373]]
+  - True class 0 was correctly classified 237 times, most confused with class 2 (116 times).
+  - True class 1 was correctly classified 122 times, most confused with class 2 (106 times).
+  - True class 2 was correctly classified 373 times, most confused with class 0 (154 times).
+
+No topic performance data for xgb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[194  55 153]
+ [ 34 218  47]
+ [100  57 442]]
+  - True class 0 was correctly classified 194 times, most confused with class 2 (153 times).
+  - True class 1 was correctly classified 218 times, most confused with class 2 (47 times).
+  - True class 2 was correctly classified 442 times, most confused with class 0 (100 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[206  13 183]
+ [102  41 156]
+ [152  26 421]]
+  - True class 0 was correctly classified 206 times, most confused with class 2 (183 times).
+  - True class 1 was correctly classified 41 times, most confused with class 2 (156 times).
+  - True class 2 was correctly classified 421 times, most confused with class 0 (152 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[210  85 107]
+ [ 77 156  66]
+ [217 116 266]]
+  - True class 0 was correctly classified 210 times, most confused with class 2 (107 times).
+  - True class 1 was correctly classified 156 times, most confused with class 0 (77 times).
+  - True class 2 was correctly classified 266 times, most confused with class 0 (217 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[246  48 108]
+ [ 28 253  18]
+ [116  91 392]]
+  - True class 0 was correctly classified 246 times, most confused with class 2 (108 times).
+  - True class 1 was correctly classified 253 times, most confused with class 0 (28 times).
+  - True class 2 was correctly classified 392 times, most confused with class 0 (116 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: xgb_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[230  43 129]
+ [ 74 111 114]
+ [152  54 393]]
+  - True class 0 was correctly classified 230 times, most confused with class 2 (129 times).
+  - True class 1 was correctly classified 111 times, most confused with class 2 (114 times).
+  - True class 2 was correctly classified 393 times, most confused with class 0 (152 times).
+
+No topic performance data for xgb_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[209  17 176]
+ [ 91  67 141]
+ [179  32 388]]
+  - True class 0 was correctly classified 209 times, most confused with class 2 (176 times).
+  - True class 1 was correctly classified 67 times, most confused with class 2 (141 times).
+  - True class 2 was correctly classified 388 times, most confused with class 0 (179 times).
+
+No topic performance data for rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[198  68 136]
+ [ 89 123  87]
+ [211 112 276]]
+  - True class 0 was correctly classified 198 times, most confused with class 2 (136 times).
+  - True class 1 was correctly classified 123 times, most confused with class 0 (89 times).
+  - True class 2 was correctly classified 276 times, most confused with class 0 (211 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: xgb_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[234  47 121]
+ [ 71 114 114]
+ [150  67 382]]
+  - True class 0 was correctly classified 234 times, most confused with class 2 (121 times).
+  - True class 1 was correctly classified 114 times, most confused with class 2 (114 times).
+  - True class 2 was correctly classified 382 times, most confused with class 0 (150 times).
+
+No topic performance data for xgb_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[221  15 166]
+ [110  42 147]
+ [157  34 408]]
+  - True class 0 was correctly classified 221 times, most confused with class 2 (166 times).
+  - True class 1 was correctly classified 42 times, most confused with class 2 (147 times).
+  - True class 2 was correctly classified 408 times, most confused with class 0 (157 times).
+
+No topic performance data for cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[199  46 157]
+ [ 13 238  48]
+ [121  89 389]]
+  - True class 0 was correctly classified 199 times, most confused with class 2 (157 times).
+  - True class 1 was correctly classified 238 times, most confused with class 2 (48 times).
+  - True class 2 was correctly classified 389 times, most confused with class 0 (121 times).
+
+No topic performance data for rf_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[227  71 104]
+ [112 124  63]
+ [176  99 324]]
+  - True class 0 was correctly classified 227 times, most confused with class 2 (104 times).
+  - True class 1 was correctly classified 124 times, most confused with class 0 (112 times).
+  - True class 2 was correctly classified 324 times, most confused with class 0 (176 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[215  54 133]
+ [112  85 102]
+ [197 108 294]]
+  - True class 0 was correctly classified 215 times, most confused with class 2 (133 times).
+  - True class 1 was correctly classified 85 times, most confused with class 0 (112 times).
+  - True class 2 was correctly classified 294 times, most confused with class 0 (197 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[247  61  94]
+ [ 34 243  22]
+ [118  95 386]]
+  - True class 0 was correctly classified 247 times, most confused with class 2 (94 times).
+  - True class 1 was correctly classified 243 times, most confused with class 0 (34 times).
+  - True class 2 was correctly classified 386 times, most confused with class 0 (118 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[197  52 153]
+ [ 27 202  70]
+ [109  62 428]]
+  - True class 0 was correctly classified 197 times, most confused with class 2 (153 times).
+  - True class 1 was correctly classified 202 times, most confused with class 2 (70 times).
+  - True class 2 was correctly classified 428 times, most confused with class 0 (109 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[197  52 153]
+ [ 27 202  70]
+ [109  62 428]]
+  - True class 0 was correctly classified 197 times, most confused with class 2 (153 times).
+  - True class 1 was correctly classified 202 times, most confused with class 2 (70 times).
+  - True class 2 was correctly classified 428 times, most confused with class 0 (109 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[188  48 166]
+ [ 25 197  77]
+ [ 99  57 443]]
+  - True class 0 was correctly classified 188 times, most confused with class 2 (166 times).
+  - True class 1 was correctly classified 197 times, most confused with class 2 (77 times).
+  - True class 2 was correctly classified 443 times, most confused with class 0 (99 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: rf_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[197  45 160]
+ [ 11 233  55]
+ [122  86 391]]
+  - True class 0 was correctly classified 197 times, most confused with class 2 (160 times).
+  - True class 1 was correctly classified 233 times, most confused with class 2 (55 times).
+  - True class 2 was correctly classified 391 times, most confused with class 0 (122 times).
+
+No topic performance data for rf_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[222  21 159]
+ [116  50 133]
+ [165  38 396]]
+  - True class 0 was correctly classified 222 times, most confused with class 2 (159 times).
+  - True class 1 was correctly classified 50 times, most confused with class 2 (133 times).
+  - True class 2 was correctly classified 396 times, most confused with class 0 (165 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: rf_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[211  43 148]
+ [ 14 238  47]
+ [137 103 359]]
+  - True class 0 was correctly classified 211 times, most confused with class 2 (148 times).
+  - True class 1 was correctly classified 238 times, most confused with class 2 (47 times).
+  - True class 2 was correctly classified 359 times, most confused with class 0 (137 times).
+
+No topic performance data for rf_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: cnb_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[202  13 187]
+ [109  36 154]
+ [139  33 427]]
+  - True class 0 was correctly classified 202 times, most confused with class 2 (187 times).
+  - True class 1 was correctly classified 36 times, most confused with class 2 (154 times).
+  - True class 2 was correctly classified 427 times, most confused with class 0 (139 times).
+
+No topic performance data for cnb_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[213  90  99]
+ [ 22 231  46]
+ [140 120 339]]
+  - True class 0 was correctly classified 213 times, most confused with class 2 (99 times).
+  - True class 1 was correctly classified 231 times, most confused with class 2 (46 times).
+  - True class 2 was correctly classified 339 times, most confused with class 0 (140 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[221  74 107]
+ [107 125  67]
+ [161  95 343]]
+  - True class 0 was correctly classified 221 times, most confused with class 2 (107 times).
+  - True class 1 was correctly classified 125 times, most confused with class 0 (107 times).
+  - True class 2 was correctly classified 343 times, most confused with class 0 (161 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[229  75  98]
+ [113 118  68]
+ [161 104 334]]
+  - True class 0 was correctly classified 229 times, most confused with class 2 (98 times).
+  - True class 1 was correctly classified 118 times, most confused with class 0 (113 times).
+  - True class 2 was correctly classified 334 times, most confused with class 0 (161 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[245  53 104]
+ [ 33 247  19]
+ [130  86 383]]
+  - True class 0 was correctly classified 245 times, most confused with class 2 (104 times).
+  - True class 1 was correctly classified 247 times, most confused with class 0 (33 times).
+  - True class 2 was correctly classified 383 times, most confused with class 0 (130 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: xgb_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[263  32 107]
+ [ 13 247  39]
+ [121  79 399]]
+  - True class 0 was correctly classified 263 times, most confused with class 2 (107 times).
+  - True class 1 was correctly classified 247 times, most confused with class 2 (39 times).
+  - True class 2 was correctly classified 399 times, most confused with class 0 (121 times).
+
+No topic performance data for xgb_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[221  15 166]
+ [110  42 147]
+ [157  34 408]]
+  - True class 0 was correctly classified 221 times, most confused with class 2 (166 times).
+  - True class 1 was correctly classified 42 times, most confused with class 2 (147 times).
+  - True class 2 was correctly classified 408 times, most confused with class 0 (157 times).
+
+No topic performance data for cnb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[209  17 176]
+ [ 91  67 141]
+ [179  32 388]]
+  - True class 0 was correctly classified 209 times, most confused with class 2 (176 times).
+  - True class 1 was correctly classified 67 times, most confused with class 2 (141 times).
+  - True class 2 was correctly classified 388 times, most confused with class 0 (179 times).
+
+No topic performance data for rf_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[188  49 165]
+ [ 26 201  72]
+ [ 97  58 444]]
+  - True class 0 was correctly classified 188 times, most confused with class 2 (165 times).
+  - True class 1 was correctly classified 201 times, most confused with class 2 (72 times).
+  - True class 2 was correctly classified 444 times, most confused with class 0 (97 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[201  71 130]
+ [ 32 229  38]
+ [107  72 420]]
+  - True class 0 was correctly classified 201 times, most confused with class 2 (130 times).
+  - True class 1 was correctly classified 229 times, most confused with class 2 (38 times).
+  - True class 2 was correctly classified 420 times, most confused with class 0 (107 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[182 180  40]
+ [184 104  11]
+ [277 237  85]]
+  - True class 0 was correctly classified 182 times, most confused with class 1 (180 times).
+  - True class 1 was correctly classified 104 times, most confused with class 0 (184 times).
+  - True class 2 was correctly classified 85 times, most confused with class 0 (277 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[193  51 158]
+ [ 34 206  59]
+ [101  55 443]]
+  - True class 0 was correctly classified 193 times, most confused with class 2 (158 times).
+  - True class 1 was correctly classified 206 times, most confused with class 2 (59 times).
+  - True class 2 was correctly classified 443 times, most confused with class 0 (101 times).
+
+No topic performance data for nb_tfidf_random_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[216  67 119]
+ [ 70 133  96]
+ [197 105 297]]
+  - True class 0 was correctly classified 216 times, most confused with class 2 (119 times).
+  - True class 1 was correctly classified 133 times, most confused with class 2 (96 times).
+  - True class 2 was correctly classified 297 times, most confused with class 0 (197 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: rf_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[233  14 155]
+ [103  62 134]
+ [210  43 346]]
+  - True class 0 was correctly classified 233 times, most confused with class 2 (155 times).
+  - True class 1 was correctly classified 62 times, most confused with class 2 (134 times).
+  - True class 2 was correctly classified 346 times, most confused with class 0 (210 times).
+
+No topic performance data for rf_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[193  48 161]
+ [ 31 189  79]
+ [105  55 439]]
+  - True class 0 was correctly classified 193 times, most confused with class 2 (161 times).
+  - True class 1 was correctly classified 189 times, most confused with class 2 (79 times).
+  - True class 2 was correctly classified 439 times, most confused with class 0 (105 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[334  13  55]
+ [197  36  66]
+ [470  31  98]]
+  - True class 0 was correctly classified 334 times, most confused with class 2 (55 times).
+  - True class 1 was correctly classified 36 times, most confused with class 0 (197 times).
+  - True class 2 was correctly classified 98 times, most confused with class 0 (470 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[208  12 182]
+ [103  42 154]
+ [157  27 415]]
+  - True class 0 was correctly classified 208 times, most confused with class 2 (182 times).
+  - True class 1 was correctly classified 42 times, most confused with class 2 (154 times).
+  - True class 2 was correctly classified 415 times, most confused with class 0 (157 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[240  71  91]
+ [114 114  71]
+ [162  88 349]]
+  - True class 0 was correctly classified 240 times, most confused with class 2 (91 times).
+  - True class 1 was correctly classified 114 times, most confused with class 0 (114 times).
+  - True class 2 was correctly classified 349 times, most confused with class 0 (162 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: rf_tfidf_media_use_select_kbest-use_smote ---
+Confusion Matrix:
+[[210  17 175]
+ [ 85  76 138]
+ [181  32 386]]
+  - True class 0 was correctly classified 210 times, most confused with class 2 (175 times).
+  - True class 1 was correctly classified 76 times, most confused with class 2 (138 times).
+  - True class 2 was correctly classified 386 times, most confused with class 0 (181 times).
+
+No topic performance data for rf_tfidf_media_use_select_kbest-use_smote
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[251  47 104]
+ [ 28 251  20]
+ [132  85 382]]
+  - True class 0 was correctly classified 251 times, most confused with class 2 (104 times).
+  - True class 1 was correctly classified 251 times, most confused with class 0 (28 times).
+  - True class 2 was correctly classified 382 times, most confused with class 0 (132 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: xgb_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[245  32 125]
+ [ 97 107  95]
+ [177  50 372]]
+  - True class 0 was correctly classified 245 times, most confused with class 2 (125 times).
+  - True class 1 was correctly classified 107 times, most confused with class 0 (97 times).
+  - True class 2 was correctly classified 372 times, most confused with class 0 (177 times).
+
+No topic performance data for xgb_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[174  85 143]
+ [ 87  67 145]
+ [191 102 306]]
+  - True class 0 was correctly classified 174 times, most confused with class 2 (143 times).
+  - True class 1 was correctly classified 67 times, most confused with class 2 (145 times).
+  - True class 2 was correctly classified 306 times, most confused with class 0 (191 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: rf_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[237  15 150]
+ [107  60 132]
+ [206  52 341]]
+  - True class 0 was correctly classified 237 times, most confused with class 2 (150 times).
+  - True class 1 was correctly classified 60 times, most confused with class 2 (132 times).
+  - True class 2 was correctly classified 341 times, most confused with class 0 (206 times).
+
+No topic performance data for rf_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[247  52 103]
+ [ 30 249  20]
+ [128  87 384]]
+  - True class 0 was correctly classified 247 times, most confused with class 2 (103 times).
+  - True class 1 was correctly classified 249 times, most confused with class 0 (30 times).
+  - True class 2 was correctly classified 384 times, most confused with class 0 (128 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: svm_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[191  29 182]
+ [147  41 111]
+ [284  22 293]]
+  - True class 0 was correctly classified 191 times, most confused with class 2 (182 times).
+  - True class 1 was correctly classified 41 times, most confused with class 0 (147 times).
+  - True class 2 was correctly classified 293 times, most confused with class 0 (284 times).
+
+No topic performance data for svm_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[198  59 145]
+ [ 35 214  50]
+ [104  64 431]]
+  - True class 0 was correctly classified 198 times, most confused with class 2 (145 times).
+  - True class 1 was correctly classified 214 times, most confused with class 2 (50 times).
+  - True class 2 was correctly classified 431 times, most confused with class 0 (104 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[246  53 103]
+ [ 32 250  17]
+ [117  91 391]]
+  - True class 0 was correctly classified 246 times, most confused with class 2 (103 times).
+  - True class 1 was correctly classified 250 times, most confused with class 0 (32 times).
+  - True class 2 was correctly classified 391 times, most confused with class 0 (117 times).
+
+No topic performance data for logreg_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: nb_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[262  45  95]
+ [117  65 117]
+ [228  76 295]]
+  - True class 0 was correctly classified 262 times, most confused with class 2 (95 times).
+  - True class 1 was correctly classified 65 times, most confused with class 0 (117 times).
+  - True class 2 was correctly classified 295 times, most confused with class 0 (228 times).
+
+No topic performance data for nb_tfidf_media_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: svm_tfidf_random_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[190  75 137]
+ [ 96 112  91]
+ [197 104 298]]
+  - True class 0 was correctly classified 190 times, most confused with class 2 (137 times).
+  - True class 1 was correctly classified 112 times, most confused with class 0 (96 times).
+  - True class 2 was correctly classified 298 times, most confused with class 0 (197 times).
+
+No topic performance data for svm_tfidf_random_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: logreg_tfidf_media_use_select_kbest-use_vader_sentiment ---
+Confusion Matrix:
+[[232  72  98]
+ [112 112  75]
+ [158 106 335]]
+  - True class 0 was correctly classified 232 times, most confused with class 2 (98 times).
+  - True class 1 was correctly classified 112 times, most confused with class 0 (112 times).
+  - True class 2 was correctly classified 335 times, most confused with class 0 (158 times).
+
+No topic performance data for logreg_tfidf_media_use_select_kbest-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: xgb_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[258  33 111]
+ [ 12 239  48]
+ [111  66 422]]
+  - True class 0 was correctly classified 258 times, most confused with class 2 (111 times).
+  - True class 1 was correctly classified 239 times, most confused with class 2 (48 times).
+  - True class 2 was correctly classified 422 times, most confused with class 0 (111 times).
+
+No topic performance data for xgb_tfidf_random_use_select_kbest-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: cnb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic ---
+Confusion Matrix:
+[[219  91  92]
+ [ 25 236  38]
+ [126 125 348]]
+  - True class 0 was correctly classified 219 times, most confused with class 2 (92 times).
+  - True class 1 was correctly classified 236 times, most confused with class 2 (38 times).
+  - True class 2 was correctly classified 348 times, most confused with class 0 (126 times).
+
+No topic performance data for cnb_tfidf_random_use_select_kbest-use_smote-use_lexical_syntactic
+
+--- Confusion Matrix Analysis for: xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[273  37  92]
+ [ 16 246  37]
+ [133  76 390]]
+  - True class 0 was correctly classified 273 times, most confused with class 2 (92 times).
+  - True class 1 was correctly classified 246 times, most confused with class 2 (37 times).
+  - True class 2 was correctly classified 390 times, most confused with class 0 (133 times).
+
+No topic performance data for xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment ---
+Confusion Matrix:
+[[273  37  92]
+ [ 16 246  37]
+ [133  76 390]]
+  - True class 0 was correctly classified 273 times, most confused with class 2 (92 times).
+  - True class 1 was correctly classified 246 times, most confused with class 2 (37 times).
+  - True class 2 was correctly classified 390 times, most confused with class 0 (133 times).
+
+No topic performance data for xgb_tfidf_random_use_select_kbest-use_smote-use_vader_sentiment
+
+--- Confusion Matrix Analysis for: rf_tfidf_random_use_select_kbest-use_lexical_syntactic ---
+Confusion Matrix:
+[[207  43 152]
+ [ 14 235  50]
+ [130  97 372]]
+  - True class 0 was correctly classified 207 times, most confused with class 2 (152 times).
+  - True class 1 was correctly classified 235 times, most confused with class 2 (50 times).
+  - True class 2 was correctly classified 372 times, most confused with class 0 (130 times).
+
+No topic performance data for rf_tfidf_random_use_select_kbest-use_lexical_syntactic
